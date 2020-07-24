@@ -4,4 +4,4 @@ start:
 	poetry run brain-games
 
 lint:
-	potery run flake8 brain-games
+	poetry run flake8 brain_games
