@@ -28,7 +28,9 @@ def start_game(name):
             counter += 1
         else:
             print('"{}" is wrong answer ;(. Correct answer was "{}"'
-                  'Let\'s try again, {}!'.format(get_word_answ(answer), get_word_answ(not answer), name))
+                  'Let\'s try again, {}!'.format(get_word_answ(answer),
+                                                 get_word_answ(not answer),
+                                                 name))
             return
     print('Congratulations, {}!'.format(name))
 
