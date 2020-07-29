@@ -40,8 +40,7 @@ def get_word_answ(ans):
 
 
 def main():
-    print('Welcome to the Brain Games!\n'
-          'Answer "yes" if number even otherwise answer "no".\n')
+    pass
 
     name = ask_name()
     start_game(name)
