@@ -22,9 +22,8 @@ def calc_answ(num1, num2, operation):
 def ask_question(name):
     operations = [('+', add), ('-', dev), ('*', mult)]
 
-    num1, num2, operation = random.randint(1, 10), \
-                            random.randint(1, 10), \
-                            random.choice(operations)
+    operation = random.choice(operations)
+    num1, num2 = cli.gen_rand(2)
 
     if operation[0] == '-' and num1 < num2:
         num1, num2 = num2, num1
@@ -34,17 +33,17 @@ def ask_question(name):
     print('Question: {} {} {}'.format(num1, operation[0], num2))
     user_answer = int(cli.get_answer())
 
-    if calc_answer == user_answer:
+    if cli.is_correct(user_answer, calc_answer):
         print('Correct!')
         return True
 
-    cli.print_incorrect_answer(user_answer, calc_answer, name)
+    cli.incorrect_answer_print(user_answer, calc_answer, name)
     return False
 
 
 def main():
     cli.meet_user('What is the result of the expression?')
-    name = cli.ask_name()
+    name = cli.get_name()
     count = 1
 
     while ask_question(name) and count < 3:
