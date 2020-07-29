@@ -22,7 +22,9 @@ def calc_answ(num1, num2, operation):
 def ask_question(name):
     operations = [('+', add), ('-', dev), ('*', mult)]
 
-    num1, num2, operation = random.randint(1, 10), random.randint(1, 10), random.choice(operations)
+    num1, num2, operation = random.randint(1, 10), \
+                            random.randint(1, 10), \
+                            random.choice(operations)
 
     if operation[0] == '-' and num1 < num2:
         num1, num2 = num2, num1
