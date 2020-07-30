@@ -9,8 +9,6 @@ def meet_user(message):
 
 
 def is_simple(num):
-    count = 2
-
     for i in range(2, num):
         res = num % i
         if res == 0:

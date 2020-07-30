@@ -6,7 +6,7 @@ def generate_progress_string(progress, rand_choose):
 
     for num in progress:
         if num == progress[rand_choose]:
-            progress_str += '.. '.format(num)
+            progress_str += '.. '
             continue
 
         progress_str += '{} '.format(num)
