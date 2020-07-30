@@ -2,13 +2,14 @@ from brain_games import cli
 
 
 def ask_question(name):
-    num = cli.gen_rand(1, min_=3)
+    num = cli.gen_rand(1, min_=3, max_=100)
 
     calc_answer = cli.is_simple(num)
+    user_answer = cli.ask_something('Question: is this num simple: {} '
+                                    '(yes/no)? '.format(num))
 
-    user_answer = cli.ask_something('Question: is this num simple: {} (yes/no)? '.format(num))
-
-    if (calc_answer and user_answer.lower() == 'yes') or (not calc_answer and user_answer.lower() == 'no'):
+    if (calc_answer and user_answer.lower() == 'yes') or \
+            (not calc_answer and user_answer.lower() == 'no'):
         return True
 
     cli.incorrect_answer_print(user_answer, 'yes' if calc_answer else 'no', name)
