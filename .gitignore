@@ -6,3 +6,4 @@ qwertynodes_brain_games.egg-info
 brain_games/scripts/__pycache__
 brain_games/__pycache__
 run_cmd.bat
+dist

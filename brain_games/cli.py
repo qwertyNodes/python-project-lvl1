@@ -8,6 +8,10 @@ def meet_user(message):
           '{}\n'.format(message))
 
 
+def ask_something(message):
+    return prompt.string(message)
+
+
 def incorrect_answer_print(user_answer, correct_answer, name):
     print('"{}" is wrong answer ;(. Correct answer was "{}".'
           .format(user_answer, correct_answer))
@@ -28,8 +32,9 @@ def congrat_message(name):
     print('Congratulations, {}!'.format(name))
 
 
-def gen_rand(nums_quantity):
-    rands = [random.randint(1, 10) for _ in range(nums_quantity)]
+def gen_rand(nums_quantity, min_=1, max_=10):
+    rands = [random.randint(min_, max_) for _ in range(nums_quantity)] \
+            if nums_quantity > 1 else random.randint(min_, max_)
     return rands
 
 
@@ -50,3 +55,19 @@ def get_NOD(num1, num2):
 
 def is_correct(ans1, ans2):
     return ans1 == ans2
+
+
+def gen_progression(q=10):
+    rand_pass = gen_rand(1)
+    rand_start = gen_rand(nums_quantity=1, min_=1, max_=100)
+
+    progress_list = list()
+    progress_list.append(rand_start)
+
+    while q:
+        rand_start += rand_pass
+        progress_list.append(rand_start)
+
+        q -= 1
+
+    return progress_list
