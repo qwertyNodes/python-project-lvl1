@@ -8,6 +8,16 @@ def meet_user(message):
           '{}\n'.format(message))
 
 
+def is_simple(num):
+    count = 2
+
+    for i in range(2, num):
+        res = num % i
+        if res == 0:
+            return False
+    return True
+
+
 def ask_something(message):
     return prompt.string(message)
 
