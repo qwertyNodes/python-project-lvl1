@@ -12,12 +12,14 @@ def ask_question(name):
             (not calc_answer and user_answer.lower() == 'no'):
         return True
 
-    cli.incorrect_answer_print(user_answer, 'yes' if calc_answer else 'no', name)
+    cli.incorrect_answer_print(user_answer,
+                               'yes' if calc_answer else 'no', name)
     return False
 
 
 def main():
-    cli.meet_user('Answer "yes" if given number is prime. Otherwise answer "no".')
+    cli.meet_user('Answer "yes" if given number is prime. '
+                  'Otherwise answer "no".')
     name = cli.get_name()
 
     count = 1
