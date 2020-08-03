@@ -7,3 +7,5 @@ brain_games/scripts/__pycache__
 brain_games/__pycache__
 run_cmd.bat
 dist
+brain_games/games/__pycache__/
+test.py

@@ -16,8 +16,8 @@ def is_simple(num):
     return True
 
 
-def ask_something(message):
-    return prompt.string(message)
+def ask_question(message):
+    return prompt.string(message + ' ')
 
 
 def incorrect_answer_print(user_answer, correct_answer, name):
@@ -40,7 +40,7 @@ def congrat_message(name):
     print('Congratulations, {}!'.format(name))
 
 
-def gen_rand(nums_quantity, min_=1, max_=10):
+def gen_rand(nums_quantity=1, min_=1, max_=10):
     rands = [random.randint(min_, max_) for _ in range(nums_quantity)] \
             if nums_quantity > 1 else random.randint(min_, max_)
     return rands
