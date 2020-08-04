@@ -1,7 +1,5 @@
 import random
 
-from brain_games.scripts import cli
-
 
 description = 'What is the result of the expression?'
 
@@ -26,7 +24,7 @@ def generate_question_answer_pair():
     operations = [('+', add), ('-', dev), ('*', mult)]
 
     operation = random.choice(operations)
-    num1, num2 = cli.gen_rand(2)
+    num1, num2 = random.randint(0, 20), random.randint(0, 20)
 
     if operation[0] == '-' and num1 < num2:
         num1, num2 = num2, num1
