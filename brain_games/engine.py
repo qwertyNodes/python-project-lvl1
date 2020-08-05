@@ -1,32 +1,5 @@
-from brain_games.games import progression as prog
-from brain_games.games import calc
-from brain_games.games import even
-from brain_games.games import gcd
-from brain_games.games import prime
-
-
 def ask(message):
     return input(message + ' ')
-
-
-def start_progression():
-    run(prog)
-
-
-def start_calc():
-    run(calc)
-
-
-def start_even():
-    run(even)
-
-
-def start_gcd():
-    run(gcd)
-
-
-def start_prime():
-    run(prime)
 
 
 def run(game):
